@@ -1,2 +1,41 @@
 mixin button(text, link)
 	a(class="button" href= link)&attributes(attributes) #{text}
+
+mixin buttonForward(text, link, foo)
+	if foo === 'submit'
+		input.button.button-forward(type='submit' value=text)
+	else
+		a(class="button button-forward" href= link)&attributes(attributes) #{text}
+
+mixin buttonMore(text, link, foo)
+	if foo === 'submit'
+		input.button.button-forward.button-more(type='submit' value=text)
+	else
+		a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
+
+mixin buttonEdit(text, link, foo)
+	if foo === 'submit'
+		input.button.button-edit(type='submit' value=text)
+	else
+		a(class="button button-edit" href= link)&attributes(attributes) #{text}
+
+mixin buttonDelete(text, link, foo)
+	if foo === 'submit'
+		input.button.button-delete(type='submit' value=text)
+	else
+		a(class="button button-delete" href= link)&attributes(attributes) #{text}
+
+mixin buttonSave(text, link, foo)
+	if foo === 'submit'
+		input.button.button-save(type='submit' value=text)
+	else
+		a(class="button button-save" href='#!')&attributes(attributes) #{text}
+
+mixin buttonEnter(text, link, foo)
+	if foo === 'submit'
+		input.button.button-enter(type='submit' value=text)
+	else
+		a(class="button button-enter" href= link)&attributes(attributes) #{text}
+
+mixin buttonProfile(text, link)
+	a(class="button button-profile" href= link)&attributes(attributes) #{text}
