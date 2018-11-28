@@ -1,0 +1,34 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Чекбокс - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Чекбокс
+			
+			.section-ui
+				input(type="checkbox" name="checkbox")#checkbox.form__input-checkbox
+				span.form-checkbox-custom #[i(class="fas fa-check transition")]
+				label(for="checkbox").form-label Запомнить меня
+
+			//- .section-ui
+			//- 	input(type="checkbox" name="checkbox")#checkbox.form__input-checkbox
+			//- 	span.form-checkbox-custom.transition
+			//- 	label(for="checkbox").form-label Запомнить меня
+
+
+
+
+
+				//- +button('Текст кнопки', '#!')
+			//- pre.
+			//- 	+button('Текст кнопки', '#!')
+			
+			//- .title mixins/_buttons.pug
+			//- pre.
+			//- 	mixin button(text, link)
+			//- 		a(class="button" href= link)&attributes(attributes) #{text}
+
