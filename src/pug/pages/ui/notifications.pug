@@ -14,7 +14,7 @@ block content
 
 
             div.mb-40
-                +notification__error--text('Данный email уже занят')
+                +notification__error--text('Данный email уже занят', '!#')
 
             div.mb-40
                 +notification__success('Запись создана успешно!')
@@ -28,11 +28,11 @@ block content
                 mixin notification__error(text)
                     div.notification__error #{text}
 
-                mixin notification__error--text(text)
+                mixin notification__error--text(text, link)
                     div.notification__error--text
                         div.notification__error.notification__error--top #{text}
                         p.mb-25 Используйте другой email чтобы создать новый аккаунт
-                        p.m-0 Или воспользуйтесь #[a(href="#!") восстановлением пароля], чтобы войти на сайт.
+                        p.m-0 Или воспользуйтесь #[a(href="#{link}") восстановлением пароля], чтобы войти на сайт.
 
                 mixin notification__success(text)
                     div.notification__success #{text}
@@ -44,7 +44,7 @@ block content
             pre.
                 +notification__error('Комментарий не может быть пустым.')
 
-                +notification__error--text('Данный email уже занят')
+                +notification__error--text('Данный email уже занят', '!#')
 
                 +notification__success('Запись создана успешно!')
 
