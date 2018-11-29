@@ -11,13 +11,24 @@ block content
 			
 			.section-ui
 				+checkbox('Запомнить меня')
+			.section-ui
+				+checkbox('Запомнить меня','checked')
 
 			pre.
 				+checkbox('Запомнить меня')
+			pre.
+				+checkbox('Запомнить меня','checked')
 			
 			.title mixins/_checkbox.pug
 			pre.
-				mixin checkbox(text)
-					input(type="checkbox" name="checkbox")#checkbox.form__input-checkbox
-					label(for="checkbox").form-label #{'#{text}'}
-
+				mixin checkbox(text, attr)
+					if attr
+						label.form-label
+							input(type="checkbox" name="checkbox" checked="#{'attr'}").form__input-checkbox
+							span.form__checkbox
+							|  #{'#{text}'}
+					else
+						label.form-label
+							input(type="checkbox" name="checkbox").form__input-checkbox
+							span.form__checkbox
+							| #{'#{text}'}
