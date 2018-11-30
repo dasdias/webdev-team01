@@ -10,7 +10,9 @@ block content
 			h1 Кнопки большие
 			
 			.section-ui
-				+buttonForward('Вперед →', '#!')
+				+button('Текст кнопки', '#!')
+				hr
+				+buttonForward('Вперед', '#!')
 				hr
 				+buttonMore('Подробнее', '#!')
 				hr
@@ -27,9 +29,9 @@ block content
 			h1 Кнопки малые
 			
 			.section-ui
-				+buttonForward('Вперед →', '#!')(class="button-small")
+				+buttonForward('Вперед', '#!')(class="button-small--border")
 				hr
-				+buttonMore('Подробнее', '#!')(class="button-small")
+				+buttonMore('Подробнее', '#!')(class="button-small--border")
 				hr
 				+buttonEdit('Редактировать', '#!')(class="button-small")
 				hr
@@ -42,7 +44,7 @@ block content
 			h1 Инпуты
 			
 			.section-ui
-				+buttonForward('Вперед →', '', 'submit')
+				+buttonForward('Вперед', '', 'submit')
 				hr
 				+buttonMore('Подробнее', '', 'submit')
 				hr
@@ -55,21 +57,23 @@ block content
 				+buttonEnter('Войти', '', 'submit')
 
 			pre.
-				+buttonForward('Вперед →', '#!')
+				+button('Текст кнопки', '#!')
+
+				+buttonForward('Вперед', '#!')
 				+buttonMore('Подробнее', '#!')
 				+buttonEdit('Редактировать', '#!')
 				+buttonDelete('Удалить', '#!')
 				+buttonSave('Сохранить', '#!')
 				+buttonProfile('Профиль', '#!')
 
-				+buttonForward('Вперед →', '#!')(class="button-small")
-				+buttonMore('Подробнее', '#!')(class="button-small")
+				+buttonForward('Вперед', '#!')(class="button-small--border")
+				+buttonMore('Подробнее', '#!')(class="button-small--border")
 				+buttonEdit('Редактировать', '#!')(class="button-small")
 				+buttonDelete('Удалить', '#!')(class="button-small")
 				+buttonSave('Сохранить', '#!')(class="button-small")
 				+buttonProfile('Профиль', '#!')(class="button-small")
 
-				+buttonForward('Вперед →', '', 'submit')
+				+buttonForward('Вперед', '', 'submit')
 				+buttonMore('Подробнее', '', 'submit')
 				+buttonEdit('Редактировать', '', 'submit')
 				+buttonDelete('Удалить', '', 'submit')
@@ -81,42 +85,44 @@ block content
 				mixin button(text, link)
 					a(class="button" href= link)&attributes(attributes) #{text}
 
-				mixin buttonForward(text, link, foo)
+				mixin buttonForward(text, link, foo,name)
 					if foo === 'submit'
-						input.button.button-forward(type='submit' value=text)
+						.input-wrap
+							input.button.button-forward(type='submit' value=text name=name)
+							i(class="fas fa-arrow-right input-arrow")
 					else
 						a(class="button button-forward" href= link)&attributes(attributes) #{text}
+							i(class="fas fa-arrow-right")
 
-				mixin buttonMore(text, link, foo)
+				mixin buttonMore(text, link, foo, name)
 					if foo === 'submit'
-						input.button.button-forward.button-more(type='submit' value=text)
+						input.button.button-forward.button-more(type='submit' value=text name=name)
 					else
 						a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
 
-				mixin buttonEdit(text, link, foo)
+				mixin buttonEdit(text, link, foo, name)
 					if foo === 'submit'
-						input.button.button-edit(type='submit' value=text)
+						input.button.button-edit(type='submit' value=text name=name)
 					else
 						a(class="button button-edit" href= link)&attributes(attributes) #{text}
 
-				mixin buttonDelete(text, link, foo)
+				mixin buttonDelete(text, link, foo, name)
 					if foo === 'submit'
-						input.button.button-delete(type='submit' value=text)
+						input.button.button-delete(type='submit' value=text name=name)
 					else
 						a(class="button button-delete" href= link)&attributes(attributes) #{text}
 
-				mixin buttonSave(text, link, foo)
+				mixin buttonSave(text, link, foo, name)
 					if foo === 'submit'
-						input.button.button-save(type='submit' value=text)
+						input.button.button-save(type='submit' value=text name=name)
 					else
 						a(class="button button-save" href='#!')&attributes(attributes) #{text}
 
-				mixin buttonEnter(text, link, foo)
+				mixin buttonEnter(text, link, foo, name)
 					if foo === 'submit'
-						input.button.button-enter(type='submit' value=text)
+						input.button.button-enter(type='submit' value=text name=name)
 					else
 						a(class="button button-enter" href= link)&attributes(attributes) #{text}
 
 				mixin buttonProfile(text, link)
 					a(class="button button-profile" href= link)&attributes(attributes) #{text}
-
