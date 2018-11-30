@@ -1,0 +1,63 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Лого - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Шапка (Гость)
+
+            .header
+                div
+                    div.logo.mb-35
+                        div.logo-icon
+                            img(src="../img/checked-icon/logo-icon.png")
+                            span Digital Lifestyle
+                        div.logo-text
+                            span Сайт IT специалиста
+
+                    -
+                        var navigation = [
+                        {name: 'Главная', link: '#'},
+                        {name: 'Обо мне', link: '#'},
+                        {name: 'Работы', link: '#'},
+                        {name: 'Блог', link: '#'},
+                        {name: 'Контакты', link: '#'}
+                        ];
+
+                    div.ml-55
+                        +navigation(navigation)
+
+                +sign-in-guest('#', '#')
+
+
+
+
+            .section-ui
+
+
+            pre.
+                .header
+                    div
+                        div.logo.mb-35
+                            div.logo-icon
+                                img(src="../img/checked-icon/logo-icon.png")
+                                span Digital Lifestyle
+                            div.logo-text
+                                span Сайт IT специалиста
+
+                        -
+                            var navigation = [
+                            {name: 'Главная', link: '#'},
+                            {name: 'Обо мне', link: '#'},
+                            {name: 'Работы', link: '#'},
+                            {name: 'Блог', link: '#'},
+                            {name: 'Контакты', link: '#'}
+                            ];
+
+                        div.ml-55
+                           +navigation(navigation)
+
+                    +sign-in-guest('#', '#')
