@@ -1,6 +1,12 @@
 mixin button(text, link)
 	a(class="button" href= link)&attributes(attributes) #{text}
 
+mixin buttonPrimary(text, link)
+	if link 
+		a(class="button button--primary" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button button--primary" href= '#!')&attributes(attributes) #{text}
+
 mixin buttonForward(text, link, foo,name)
 	if foo === 'submit'
 		.input-wrap

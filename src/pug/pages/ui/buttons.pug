@@ -18,6 +18,16 @@ block content
 					mixin button(text, link)
 						a(class="button" href= link)&attributes(attributes) #{text}
 				hr
+				+buttonPrimary('Текст кнопки', '#!')
+				pre.
+					+buttonPrimary('Текст кнопки', '#!')
+				.title mixins/_buttons.pug
+				pre.
+					+buttonPrimary('Текст кнопки', '#!')
+					if link 
+						a(class="button button--primary" href= link)&attributes(attributes) #{text}
+					else
+						a(class="button button--primary" href= '#!')&attributes(attributes) #{text}
 				+buttonForward('Вперед', '#!')
 				pre.
 					+buttonForward('Вперед', '#!')
