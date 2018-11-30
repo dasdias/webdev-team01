@@ -1,6 +1,6 @@
  @checkboxBg: #1e6791;
 
- .form__input-checkbox {
+ .form-input-checkbox {
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
@@ -8,7 +8,7 @@
 	position: absolute;
 	z-index: -1; 
 }
-.form__input-checkbox:checked + .form__checkbox {
+.form-input-checkbox:checked + .form__checkbox {
 	background-position: center 5px; 
 }
 .form__checkbox {
@@ -22,7 +22,11 @@
 	background-position: center -10px; 
 	transition: all 0.2s ease-in;
 	vertical-align: sub;
+	margin-right: 10px;
 }
 .form-label {
+	font-family: @baseFont;
+	font-size: 16px;
+	line-height: 1;
 	cursor: pointer; 
 }
