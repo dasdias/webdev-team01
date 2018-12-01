@@ -7,23 +7,14 @@ block variables
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Бейдж (как блок)
+			h1 Бейдж
 			.section-ui
+				.title Бейдж (только текст)
 				+badge("Пользователь")
 			pre.
-				+badge(text)
-			.title mixins/_badge.pug
-			pre.
-				mixin badge(text, link)
-				a(class="badge" href= link)&attributes(attributes) #{text}
-
-			h1 Бейдж (как ссылка)
+				+badge("Пользователь")
 			.section-ui
+				.title Бейдж ссылка
 				+badge("Пользователь", "!#")
 			pre.
-				+badge(text, link)
-			.title mixins/_badge.pug
-			pre.
-				mixin badge(text, link)
-				a(class="badge" href= link)&attributes(attributes) #{text}
-				
+				+badge("Пользователь", "!#")
