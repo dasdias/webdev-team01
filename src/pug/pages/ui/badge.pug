@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Бейдж - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Бейдж (как блок)
+			.section-ui
+				+badge("Пользователь")
+			pre.
+				+badge(text)
+			.title mixins/_badge.pug
+			pre.
+				mixin badge(text, link)
+				a(class="badge" href= link)&attributes(attributes) #{text}
+
+			h1 Бейдж (как ссылка)
+			.section-ui
+				+badge("Пользователь", "!#")
+			pre.
+				+badge(text, link)
+			.title mixins/_badge.pug
+			pre.
+				mixin badge(text, link)
+				a(class="badge" href= link)&attributes(attributes) #{text}
+				
