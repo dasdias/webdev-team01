@@ -1,5 +1,5 @@
-mixin button(text, link)
-	a(class="button" href= link)&attributes(attributes) #{text}
+//- mixin button(text, link)
+//- 	a(class="button" href= link)&attributes(attributes) #{text}
 
 mixin buttonPrimary(text, link)
 	if link 
@@ -7,42 +7,69 @@ mixin buttonPrimary(text, link)
 	else
 		a(class="button button--primary" href= '#!')&attributes(attributes) #{text}
 
-mixin buttonForward(text, link, type,name)
-	if type === 'submit'
+mixin button(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		input.button.button-small--border(type='submit' value=text name=name)
+	else if type === 'submit'
+		input.button(type='submit' value=text name=name)
+	else if small === 'small'
+		a(class="button button-small--border" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button" href= link)&attributes(attributes) #{text}
+
+mixin buttonForward(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		.input-wrap
+			input.button.button-forward.button-small--border(type='submit' value=text name=name)
+			i(class="fas fa-arrow-right input-arrow--small")
+	else if type === 'submit'
 		.input-wrap
 			input.button.button-forward(type='submit' value=text name=name)
 			i(class="fas fa-arrow-right input-arrow")
-	else
+	else if small === 'small'
+		a(class="button button-forward button-small--border" href= link)&attributes(attributes) #{text}
+			i(class="fas fa-arrow-right")
+	else 
 		a(class="button button-forward" href= link)&attributes(attributes) #{text}
 			i(class="fas fa-arrow-right")
 
-mixin buttonMore(text, link, type, name)
-	if type === 'submit'
-		input.button.button-forward.button-more(type='submit' value=text name=name)
-	else
-		a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
-
-mixin buttonEdit(text, link, type, name)
-	if type === 'submit'
+mixin buttonEdit(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		input.button.button-edit.button-small(type='submit' value=text name=name)
+	else if type === 'submit'
 		input.button.button-edit(type='submit' value=text name=name)
+	else if small === 'small'
+		a(class="button button-edit button-small" href= link)&attributes(attributes) #{text}
 	else
 		a(class="button button-edit" href= link)&attributes(attributes) #{text}
 
-mixin buttonDelete(text, link, type, name)
-	if type === 'submit'
+mixin buttonDelete(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		input.button.button-delete.button-small(type='submit' value=text name=name)
+	else if type === 'submit'
 		input.button.button-delete(type='submit' value=text name=name)
+	else if small === 'small'
+		a(class="button button-delete button-small" href= link)&attributes(attributes) #{text}
 	else
 		a(class="button button-delete" href= link)&attributes(attributes) #{text}
 
-mixin buttonSave(text, link, type, name)
-	if type === 'submit'
+mixin buttonSave(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		input.button.button-save.button-small(type='submit' value=text name=name)
+	else if type === 'submit'
 		input.button.button-save(type='submit' value=text name=name)
+	else if small === 'small'
+		a(class="button button-save button-small" href='#!')&attributes(attributes) #{text}
 	else
 		a(class="button button-save" href='#!')&attributes(attributes) #{text}
 
-mixin buttonEnter(text, link, type, name)
-	if type === 'submit'
+mixin buttonEnter(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		input.button.button-enter.button-small(type='submit' value=text name=name)
+	else if type === 'submit'
 		input.button.button-enter(type='submit' value=text name=name)
+	else if small === 'small'
+		a(class="button button-enter button-small" href= link)&attributes(attributes) #{text}
 	else
 		a(class="button button-enter" href= link)&attributes(attributes) #{text}
 

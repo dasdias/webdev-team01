@@ -17,19 +17,34 @@ input {
 		
  	padding-top: 0.8em;  // 14px	
 	padding-bottom: 0.951em; // 13px	
-	padding-left: 1.25em; // 20px	
-	padding-right: 1.25em; // 20px	
+	padding-left: 1.823em;
+    padding-right: 1.823em;
  	color: #ffffff;	
 	font-family: @baseFont;	
 	font-size: 16px;
 	font-weight: 600;
-	&:hover,		
-	&:focus {		
-		background-color: #DDE8EE;
+// от кнопки баттон форвард
+	border: 2px solid #dde8ee;
+	background-color: #ffffff;
+	color: #037ec6;
+	padding: 0.75em 1.792em;
+	&:hover,
+	&:focus {
+		border: 2px solid #dde8ee;
+		background-color: #dde8ee;
 	}
 	&:active {
+		border: 2px solid #b4dff6;
 		background-color: #b4dff6;
 	}
+
+	// &:hover,		
+	// &:focus {		
+	// 	background-color: #DDE8EE;
+	// }
+	// &:active {
+	// 	background-color: #b4dff6;
+	// }
 }
 
 .button--primary {
@@ -63,12 +78,21 @@ input {
     display: inline-block;
     position: relative;
 }
+
 .input-arrow {
     position: absolute;
     top: 18px;
     right: 29px;
     color: #037ec6;
 }
+
+.input-arrow--small {
+	position: absolute;
+    top: 12px;
+    right: 29px;
+    color: #037ec6;
+}
+
 .fa-arrow-right {
     margin-left: 5px;
     font-size: 11px;
@@ -78,12 +102,8 @@ input.button-forward {
 	padding-right: 2.704em;
 }
 
-.button-more {
-    padding-left: 1.823em;
-    padding-right: 1.823em;
-}
-
 .button-edit {
+	border: 0;
 	background-color: #ffba00;
 	color: #ffffff;
 	padding-left: 1.48em;
@@ -98,6 +118,7 @@ input.button-forward {
 }
 
 .button-delete {
+	border: 0;
 	background-color: #b51919;
 	color: #ffffff;
 	padding-left: 1.43em;
@@ -112,6 +133,7 @@ input.button-forward {
 }
 
 .button-save {
+	border: 0;
 	background-color: #037ec6;
 	color: #ffffff;
 	padding-left: 2em;
@@ -126,6 +148,7 @@ input.button-forward {
 }
 
 .button-enter {
+	border: 0;
 	box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
 	background-color: #ffffff;
 	color: #037ec6;
@@ -170,4 +193,9 @@ input.button-forward {
 	&--border {
 		padding: 0.375em 1.25em;
 	}
+}
+
+.buttons-container--ui-kit {
+	display: flex;
+	flex-direction: row;
 }

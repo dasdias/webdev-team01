@@ -8,242 +8,98 @@ block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
 			h1 Кнопки большие
-			
 			.section-ui
+				.buttons-container--ui-kit
+					+buttonForward('Вперед', '#!')
+					.pr-10
+					+button('Подробнее', '#!')
+					.pr-10
+					+buttonEdit('Редактировать', '#!')
+					.pr-10
+					+buttonDelete('Удалить', '#!')
+					.pr-10
+					+buttonSave('Сохранить', '#!')
+					.pr-10
+					+buttonEnter('Войти', '#!')
+			pre.
 				+buttonForward('Вперед', '#!')
-			pre.
-				+buttonForward('Вперед', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonForward(text, link, type,name)
-					if type === 'submit'
-						.input-wrap
-							input.button.button-forward(type='submit' value=text name=name)
-							i(class="fas fa-arrow-right input-arrow")
-					else
-						a(class="button button-forward" href= link)&attributes(attributes) #{text}
-			
-							i(class="fas fa-arrow-right")
-			hr
-			.section-ui
-				+buttonMore('Подробнее', '#!')
-			pre.
-				+buttonMore('Подробнее', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonMore(text, link, type, name)
-					if type === 'submit'
-						input.button.button-forward.button-more(type='submit' value=text name=name)
-					else
-						a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
+				+button('Подробнее', '#!')
 				+buttonEdit('Редактировать', '#!')
-			pre.
-				+buttonEdit('Редактировать', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEdit(text, link, type, name)
-					if type === 'submit'
-						input.button.button-edit(type='submit' value=text name=name)
-					else
-						a(class="button button-edit" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
 				+buttonDelete('Удалить', '#!')
-			pre.
-				+buttonDelete('Удалить', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonDelete(text, link, type, name)
-					if type === 'submit'
-						input.button.button-delete(type='submit' value=text name=name)
-					else
-						a(class="button button-delete" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
 				+buttonSave('Сохранить', '#!')
-			pre.
-				+buttonSave('Сохранить', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonSave(text, link, type, name)
-					if type === 'submit'
-						input.button.button-save(type='submit' value=text name=name)
-					else
-						a(class="button button-save" href='#!')&attributes(attributes) #{text}
-			hr
-			.section-ui
 				+buttonEnter('Войти', '#!')
-			pre.
-				+buttonEnter('Войти', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEnter(text, link, type, name)
-					if type === 'submit'
-						input.button.button-enter(type='submit' value=text name=name)
-					else
-						a(class="button button-enter" href= link)&attributes(attributes) #{text}
+				+buttonProfile('Профиль', '#!')
 			hr
+			h1 Кнопка Профиль
 			.section-ui
 				+buttonProfile('Профиль', '#!')
 			pre.
 				+buttonProfile('Профиль', '#!')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonProfile(text, link)
-					a(class="button button-profile" href= link)&attributes(attributes) #{text}
 			hr
-
 			h1 Кнопки малые
 			.section-ui
-				+buttonForward('Вперед', '#!')(class="button-small--border")
+				.buttons-container--ui-kit
+					+buttonForward('Вперед', '#!', 'small')
+					.pr-10
+					+button('Подробнее', '#!', 'small')
+					.pr-10
+					+buttonEdit('Редактировать', '#!', 'small')
+					.pr-10
+					+buttonDelete('Удалить', '#!', 'small')
+					.pr-10
+					+buttonSave('Сохранить', '#!', 'small')
+					.pr-10
+					+buttonEnter('Войти', '#!', 'small')
 			pre.
-				+buttonForward('Вперед', '#!')(class="button-small--border")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonForward(text, link, type,name)
-					if type === 'submit'
-						.input-wrap
-							input.button.button-forward(type='submit' value=text name=name)
-							i(class="fas fa-arrow-right input-arrow")
-					else
-						a(class="button button-forward" href= link)&attributes(attributes) #{text}
-							i(class="fas fa-arrow-right")
+				+buttonForward('Вперед', '#!', 'small')
+				+button('Подробнее', '#!', 'small')
+				+buttonEdit('Редактировать', '#!', 'small')
+				+buttonDelete('Удалить', '#!', 'small')
+				+buttonSave('Сохранить', '#!', 'small')
+				+buttonEnter('Войти', '#!', 'small')
+				+buttonProfile('Профиль', '#!', 'small')
 			hr
+			h1 Инпуты большие
 			.section-ui
-				+buttonMore('Подробнее', '#!')(class="button-small--border")
+				.buttons-container--ui-kit
+					+buttonForward('Вперед', '', '', 'submit', 'name')
+					.pr-10
+					+button('Подробнее', '', '', 'submit', 'name')
+					.pr-10
+					+buttonEdit('Редактировать', '', '', 'submit', 'name')
+					.pr-10
+					+buttonDelete('Удалить', '', '', 'submit', 'name')
+					.pr-10
+					+buttonSave('Сохранить', '', '', 'submit', 'name')
+					.pr-10
+					+buttonEnter('Войти', '', '', 'submit', 'name')
 			pre.
-				+buttonMore('Подробнее', '#!')(class="button-small--border")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonMore(text, link, type, name)
-					if type === 'submit'
-						input.button.button-forward.button-more(type='submit' value=text name=name)
-					else
-						a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
+				+buttonForward('Вперед', '', '', 'submit', 'name')
+				+button('Подробнее', '', '', 'submit', 'name')
+				+buttonEdit('Редактировать', '', '', 'submit', 'name')
+				+buttonDelete('Удалить', '', '', 'submit', 'name')
+				+buttonSave('Сохранить', '', '', 'submit', 'name')
+				+buttonEnter('Войти', '', '', 'submit', 'name')
 			hr
+			h1 Инпуты малые
 			.section-ui
-				+buttonEdit('Редактировать', '#!')(class="button-small")
+				.buttons-container--ui-kit
+					+buttonForward('Вперед', '', 'small', 'submit', 'name')
+					.pr-10
+					+button('Подробнее', '', 'small', 'submit', 'name')
+					.pr-10
+					+buttonEdit('Редактировать', '', 'small', 'submit', 'name')
+					.pr-10
+					+buttonDelete('Удалить', '', 'small', 'submit', 'name')
+					.pr-10
+					+buttonSave('Сохранить', '', 'small', 'submit', 'name')
+					.pr-10
+					+buttonEnter('Войти', '', 'small', 'submit', 'name')
 			pre.
-				+buttonEdit('Редактировать', '#!')(class="button-small")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEdit(text, link, type, name)
-					if type === 'submit'
-						input.button.button-edit(type='submit' value=text name=name)
-					else
-						a(class="button button-edit" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonDelete('Удалить', '#!')(class="button-small")
-			pre.
-				+buttonDelete('Удалить', '#!')(class="button-small")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonDelete(text, link, type, name)
-					if type === 'submit'
-						input.button.button-delete(type='submit' value=text name=name)
-					else
-						a(class="button button-delete" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonSave('Сохранить', '#!')(class="button-small")
-			pre.
-				+buttonSave('Сохранить', '#!')(class="button-small")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonSave(text, link, type, name)
-					if type === 'submit'
-						input.button.button-save(type='submit' value=text name=name)
-					else
-						a(class="button button-save" href='#!')&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonEnter('Войти', '#!')(class="button-small")
-			pre.
-				+buttonEnter('Войти', '#!')(class="button-small")
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEnter(text, link, type, name)
-					if type === 'submit'
-						input.button.button-enter(type='submit' value=text name=name)
-					else
-						a(class="button button-enter" href= link)&attributes(attributes) #{text}
-			hr
-			h1 Инпуты
-			
-			.section-ui
-				+buttonForward('Вперед', '', 'submit')
-			pre.
-				+buttonForward('Вперед', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonForward(text, link, type,name)
-					if type === 'submit'
-						.input-wrap
-							input.button.button-forward(type='submit' value=text name=name)
-							i(class="fas fa-arrow-right input-arrow")
-					else
-						a(class="button button-forward" href= link)&attributes(attributes) #{text}
-							i(class="fas fa-arrow-right")
-			hr
-			.section-ui
-				+buttonMore('Подробнее', '', 'submit')
-			pre.
-				+buttonMore('Подробнее', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonMore(text, link, type, name)
-					if type === 'submit'
-						input.button.button-forward.button-more(type='submit' value=text name=name)
-					else
-						a(class="button button-forward button-more" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonEdit('Редактировать', '', 'submit')
-			pre.
-				+buttonEdit('Редактировать', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEdit(text, link, type, name)
-					if type === 'submit'
-						input.button.button-edit(type='submit' value=text name=name)
-					else
-						a(class="button button-edit" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonDelete('Удалить', '', 'submit')
-			pre.
-				+buttonDelete('Удалить', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonDelete(text, link, type, name)
-					if type === 'submit'
-						input.button.button-delete(type='submit' value=text name=name)
-					else
-						a(class="button button-delete" href= link)&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonSave('Сохранить', '', 'submit')
-			pre.
-				+buttonSave('Сохранить', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonSave(text, link, type, name)
-					if type === 'submit'
-						input.button.button-save(type='submit' value=text name=name)
-					else
-						a(class="button button-save" href='#!')&attributes(attributes) #{text}
-			hr
-			.section-ui
-				+buttonEnter('Войти', '', 'submit')
-			pre.
-				+buttonEnter('Войти', '', 'submit')
-			.title mixins/_buttons.pug
-			pre.
-				mixin buttonEnter(text, link, type, name)
-					if type === 'submit'
-						input.button.button-enter(type='submit' value=text name=name)
-					else
-						a(class="button button-enter" href= link)&attributes(attributes) #{text}
+				+buttonForward('Вперед', '', 'small', 'submit', 'name')
+				+button('Подробнее', '', 'small', 'submit', 'name')
+				+buttonEdit('Редактировать', 'small', '', 'submit', 'name')
+				+buttonDelete('Удалить', '', 'small', 'submit', 'name')
+				+buttonSave('Сохранить', '', 'small', 'submit', 'name')
+				+buttonEnter('Войти', '', 'small', 'submit', 'name')
+	
