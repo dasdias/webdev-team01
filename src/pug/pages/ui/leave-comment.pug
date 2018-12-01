@@ -1,0 +1,51 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Оставить коментарий - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Оставить коментарий
+			
+			.section-ui
+				h2 Оставить комментарий
+				.leave-comment
+					.leave-comment__left
+						+avatar('avatar-1.jpg')
+
+					.leave-comment__right
+						.leave-comment__name Юрий Ключевский
+						+notification__error('Комментарий не может быть пустым.')
+						.mb-10
+
+						+textarea("Присоединиться к обсуждению...")
+						.mb-10
+						+button('Опубликовать', '#!')
+
+
+
+
+			//- 	+checkbox('Запомнить меня')
+			//- .section-ui
+			//- 	+checkbox('Запомнить меня','checked')
+
+			//- pre.
+			//- 	+checkbox('Запомнить меня')
+			//- pre.
+			//- 	+checkbox('Запомнить меня','checked')
+			
+			//- .title mixins/_checkbox.pug
+			//- pre.
+			//- 	mixin checkbox(text, attr)
+			//- 		if attr
+			//- 			label.form-label
+			//- 				input(type="checkbox" name="checkbox" checked="#{'attr'}").form-input-checkbox
+			//- 				span.form__checkbox
+			//- 				|  #{'#{text}'}
+			//- 		else
+			//- 			label.form-label
+			//- 				input(type="checkbox" name="checkbox").form-input-checkbox
+			//- 				span.form__checkbox
+			//- 				| #{'#{text}'}
