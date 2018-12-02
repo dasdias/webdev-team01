@@ -10,42 +10,24 @@ block content
 			h1 Оставить коментарий
 			
 			.section-ui
-				h2 Оставить комментарий
+
+				include ../../sections/leave-comment.pug
+
+			pre.
+				include ../../sections/leave-comment.pug
+			
+			.title sections/leave-comment.pug
+			pre.
+				.title-2 Оставить комментарий
 				.leave-comment
-					.leave-comment__left
+					.leave-comment-avatar
 						+avatar('avatar-1.jpg')
 
-					.leave-comment__right
-						.leave-comment__name Юрий Ключевский
+					form.leave-comment-form
+						.leave-comment-form__name Юрий Ключевский
 						+notification__error('Комментарий не может быть пустым.')
 						.mb-10
 
 						+textarea("Присоединиться к обсуждению...")
 						.mb-10
 						+button('Опубликовать', '#!')
-
-
-
-
-			//- 	+checkbox('Запомнить меня')
-			//- .section-ui
-			//- 	+checkbox('Запомнить меня','checked')
-
-			//- pre.
-			//- 	+checkbox('Запомнить меня')
-			//- pre.
-			//- 	+checkbox('Запомнить меня','checked')
-			
-			//- .title mixins/_checkbox.pug
-			//- pre.
-			//- 	mixin checkbox(text, attr)
-			//- 		if attr
-			//- 			label.form-label
-			//- 				input(type="checkbox" name="checkbox" checked="#{'attr'}").form-input-checkbox
-			//- 				span.form__checkbox
-			//- 				|  #{'#{text}'}
-			//- 		else
-			//- 			label.form-label
-			//- 				input(type="checkbox" name="checkbox").form-input-checkbox
-			//- 				span.form__checkbox
-			//- 				| #{'#{text}'}
