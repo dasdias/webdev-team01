@@ -3,6 +3,11 @@ input {
 	border: 0; // для Safari
 }
 
+.buttons-container--ui-kit {
+	display: flex;
+	flex-direction: row;
+}
+
 .button {
 	.transition;
 	display: inline-block;		
@@ -10,20 +15,11 @@ input {
 	outline: none;	
 	cursor: pointer;		
 	text-decoration: none;		
-		
-	// height: 44px;	
+			
 	border-radius: 22px;	
-	background-color: #bbc7d3;	
-		
- 	padding-top: 0.8em;  // 14px	
-	padding-bottom: 0.951em; // 13px	
-	padding-left: 1.823em;
-    padding-right: 1.823em;
- 	color: #ffffff;	
 	font-family: @baseFont;	
 	font-size: 16px;
 	font-weight: 600;
-// от кнопки баттон форвард
 	border: 2px solid #dde8ee;
 	background-color: #ffffff;
 	color: #037ec6;
@@ -37,14 +33,6 @@ input {
 		border: 2px solid #b4dff6;
 		background-color: #b4dff6;
 	}
-
-	// &:hover,		
-	// &:focus {		
-	// 	background-color: #DDE8EE;
-	// }
-	// &:active {
-	// 	background-color: #b4dff6;
-	// }
 }
 
 .button--primary {
@@ -62,7 +50,7 @@ input {
 	border: 2px solid #dde8ee;
 	background-color: #ffffff;
 	color: #037ec6;
-	padding: 0.75em 1.792em;
+	padding: 0.75em 2.7em 0.75em 1.8em;
 	&:hover,
 	&:focus {
 		border: 2px solid #dde8ee;
@@ -74,32 +62,50 @@ input {
 	}
 }
 
-.input-wrap {
-    display: inline-block;
+.button-backward {
+	border: 2px solid #dde8ee;
+	background-color: #ffffff;
+	color: #037ec6;
+	padding: 0.75em 2.3em 0.75em 2.84em;
+	&:hover,
+	&:focus {
+		border: 2px solid #dde8ee;
+		background-color: #dde8ee;
+	}
+	&:active {
+		border: 2px solid #b4dff6;
+		background-color: #b4dff6;
+	}
+}
+
+.button__arrow-wrap {
     position: relative;
 }
 
-.input-arrow {
+.fa-arrow-right,
+.fa-arrow-left {
+    font-size: 11px;
     position: absolute;
-    top: 18px;
-    right: 29px;
+    top: 17px;
     color: #037ec6;
 }
 
-.input-arrow--small {
-	position: absolute;
-    top: 12px;
-    right: 29px;
-    color: #037ec6;
+.fa-arrow-left {
+    right: 93px;
 }
 
 .fa-arrow-right {
-    margin-left: 5px;
-    font-size: 11px;
+    right: 30px;
 }
 
-input.button-forward {
-	padding-right: 2.704em;
+.arrow--small-left {
+    top: 11px;
+    right: 67px;
+}
+
+.arrow--small-right {
+    top: 11px;
+    right: 17px;
 }
 
 .button-edit {
@@ -110,9 +116,11 @@ input.button-forward {
     padding-right: 1.48em;
 	&:hover,
 	&:focus {
-		background-color: #ffcf3e;
+		border: 0;
+		background-color: #ffcf3e;	
 	}
 	&:active {
+		border: 0;
 		background-color: #f29a00;
 	}
 }
@@ -125,9 +133,11 @@ input.button-forward {
     padding-right: 1.43em;
 	&:hover,
 	&:focus {
+		border: 0;
 		background-color: #e70c0c;
 	}
 	&:active {
+		border: 0;
 		background-color: #990101;
 	}
 }
@@ -140,9 +150,11 @@ input.button-forward {
     padding-right: 2em;
 	&:hover,
 	&:focus {
+		border: 0;
 		background-color: #0094eb;
 	}
 	&:active {
+		border: 0;
 		background-color: #0069a7;
 	}
 }
@@ -156,10 +168,12 @@ input.button-forward {
     padding-right: 2.63em;
 	&:hover,
 	&:focus {
+		border: 0;
 		background-color: #037ec6;
 		color: #ffffff;
 	}
 	&:active {
+		border: 0;
 		background-color: #0069a7;
 		box-shadow: 0 1px 4px rgba(23, 50, 66, 0.75);
 		color: #ffffff;
@@ -177,10 +191,12 @@ input.button-forward {
 	padding: 0.5em 1.08em;
 	&:hover,
 	&:focus {
+		border: 0;
 		background-color: #000000;
 		opacity: 0.4;
 	}
 	&:active {
+		border: 0;
 		background-color: #000000;
 		opacity: 0.6;
 	}
@@ -189,13 +205,23 @@ input.button-forward {
 .button-small {
 	font-size: 14px;
 	border-radius: 16px;
-	padding: 0.643em 1.25em;
-	&--border {
-		padding: 0.375em 1.25em;
-	}
+	padding: 0.643em 1.42em;
 }
 
-.buttons-container--ui-kit {
-	display: flex;
-	flex-direction: row;
+.button-small--border {
+	font-size: 14px;
+	border-radius: 16px;
+	padding: 0.5em 1.41em;
+}
+
+.button-small--backward {
+	font-size: 14px;
+	border-radius: 16px;
+	padding: 0.5em 1.41em 0.5em 2em;
+}
+
+.button-small--forward {
+	font-size: 14px;
+	border-radius: 16px;
+	padding: 0.5em 2em 0.5em 1.41em ;
 }

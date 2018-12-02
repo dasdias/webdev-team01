@@ -19,19 +19,39 @@ mixin button(text, link, small, type, name)
 
 mixin buttonForward(text, link, small, type, name)
 	if type === 'submit' & small ==='small'
-		.input-wrap
-			input.button.button-forward.button-small--border(type='submit' value=text name=name)
-			i(class="fas fa-arrow-right input-arrow--small")
+		.button__arrow-wrap
+			input.button.button-forward.button-small--forward(type='submit' value=text name=name)
+			i(class="fas fa-arrow-right arrow--small-right")
 	else if type === 'submit'
-		.input-wrap
+		.button__arrow-wrap
 			input.button.button-forward(type='submit' value=text name=name)
-			i(class="fas fa-arrow-right input-arrow")
+			i(class="fas fa-arrow-right")
 	else if small === 'small'
-		a(class="button button-forward button-small--border" href= link)&attributes(attributes) #{text}
-			i(class="fas fa-arrow-right")
+		.button__arrow-wrap
+			a(class="button button-forward button-small--forward" href= link)&attributes(attributes) #{text}
+			i(class="fas fa-arrow-right arrow--small-right")
 	else 
-		a(class="button button-forward" href= link)&attributes(attributes) #{text}
+		.button__arrow-wrap
+			a(class="button button-forward" href= link)&attributes(attributes) #{text}
 			i(class="fas fa-arrow-right")
+
+mixin buttonBackward(text, link, small, type, name)
+	if type === 'submit' & small ==='small'
+		.button__arrow-wrap
+			input.button.button-backward.button-small--backward(type='submit' value=text name=name)
+			i(class="fas fa-arrow-left arrow--small-left")
+	else if type === 'submit'
+		.button__arrow-wrap
+			input.button.button-backward(type='submit' value=text name=name)
+			i(class="fas fa-arrow-left")
+	else if small === 'small'
+		.button__arrow-wrap
+			a(class="button button-backward button-small--backward" href= link)&attributes(attributes) #{text}
+			i(class="fas fa-arrow-left arrow--small-left")
+	else 
+		.button__arrow-wrap
+			a(class="button button-backward" href= link)&attributes(attributes) #{text}
+			i(class="fas fa-arrow-left")
 
 mixin buttonEdit(text, link, small, type, name)
 	if type === 'submit' & small ==='small'

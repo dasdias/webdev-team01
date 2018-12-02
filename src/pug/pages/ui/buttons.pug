@@ -10,6 +10,8 @@ block content
 			h1 Кнопки большие
 			.section-ui
 				.buttons-container--ui-kit
+					+buttonBackward('Назад', '#!')
+					.pr-10
 					+buttonForward('Вперед', '#!')
 					.pr-10
 					+button('Подробнее', '#!')
@@ -22,6 +24,7 @@ block content
 					.pr-10
 					+buttonEnter('Войти', '#!')
 			pre.
+				+buttonBackward('Назад', '#!')
 				+buttonForward('Вперед', '#!')
 				+button('Подробнее', '#!')
 				+buttonEdit('Редактировать', '#!')
@@ -39,6 +42,8 @@ block content
 			h1 Кнопки малые
 			.section-ui
 				.buttons-container--ui-kit
+					+buttonBackward('Назад', '#!', 'small')
+					.pr-10
 					+buttonForward('Вперед', '#!', 'small')
 					.pr-10
 					+button('Подробнее', '#!', 'small')
@@ -51,6 +56,7 @@ block content
 					.pr-10
 					+buttonEnter('Войти', '#!', 'small')
 			pre.
+				+buttonBackward('Назад', '#!', 'small')
 				+buttonForward('Вперед', '#!', 'small')
 				+button('Подробнее', '#!', 'small')
 				+buttonEdit('Редактировать', '#!', 'small')
@@ -62,6 +68,8 @@ block content
 			h1 Инпуты большие
 			.section-ui
 				.buttons-container--ui-kit
+					+buttonBackward('Назад', '', '', 'submit', 'name')
+					.pr-10
 					+buttonForward('Вперед', '', '', 'submit', 'name')
 					.pr-10
 					+button('Подробнее', '', '', 'submit', 'name')
@@ -74,6 +82,7 @@ block content
 					.pr-10
 					+buttonEnter('Войти', '', '', 'submit', 'name')
 			pre.
+				+buttonBackward('Назад', '', '', 'submit', 'name')
 				+buttonForward('Вперед', '', '', 'submit', 'name')
 				+button('Подробнее', '', '', 'submit', 'name')
 				+buttonEdit('Редактировать', '', '', 'submit', 'name')
@@ -84,6 +93,8 @@ block content
 			h1 Инпуты малые
 			.section-ui
 				.buttons-container--ui-kit
+					+buttonBackward('Назад', '', 'small', 'submit', 'name')
+					.pr-10
 					+buttonForward('Вперед', '', 'small', 'submit', 'name')
 					.pr-10
 					+button('Подробнее', '', 'small', 'submit', 'name')
@@ -96,6 +107,7 @@ block content
 					.pr-10
 					+buttonEnter('Войти', '', 'small', 'submit', 'name')
 			pre.
+				+buttonBackward('Назад', '', 'small', 'submit', 'name')
 				+buttonForward('Вперед', '', 'small', 'submit', 'name')
 				+button('Подробнее', '', 'small', 'submit', 'name')
 				+buttonEdit('Редактировать', 'small', '', 'submit', 'name')
