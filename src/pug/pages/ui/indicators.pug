@@ -10,23 +10,35 @@ block content
 			h1 Индикаторы
 			.section-ui
 				.indicators-container
-					.row.mt-50.ml-50.pt-50
-						+indicator('HTML5', 'green')
-						.pl-60
-						+indicator('CSS3', 'green')
-						.pl-60
-						+indicator('JS', 'green')
-						.pl-60
-						+indicator('jQuery', 'green')
 					.row.ml-50.pt-50
-						+indicator('PHP', 'blue')
-						.pl-60
-						+indicator('MySql', 'blue')
+						+indicator('HTML5', 'green','90')
+						+indicator('CSS3', 'green','40')
+						+indicator('JS', 'green','50')
+						+indicator('jQuery', 'green','90')
 					.row.ml-50.pt-50
-						+indicator('Git', 'yellow')
-						.pl-60
-						+indicator('Gulp', 'yellow')
-						.pl-60
-						+indicator('Bower', 'yellow')
-						.pl-60
-						+indicator('WebPack', 'yellow')
+						+indicator('PHP', 'blue','40')
+						+indicator('MySql', 'blue','50')
+					.row.ml-50.pt-50
+						+indicator('Git', 'yellow','90')
+						+indicator('Gulp', 'yellow','40')
+						+indicator('Bower', 'yellow','50')
+						+indicator('WebPack', 'yellow','90')
+					.row.ml-50.pt-50
+						+indicator('90%', 'yellow','90')
+						+indicator('40%', 'yellow','40')
+						+indicator('50%', 'yellow','50')
+				.title 
+				pre.
+					+indicator('HTML5', 'green','90')
+					+indicator('CSS3', 'green','40')
+					+indicator('JS', 'green','50')
+					+indicator('jQuery', 'green','90')
+					+indicator('PHP', 'blue','40')
+					+indicator('MySql', 'blue','50')
+					+indicator('Git', 'yellow','90')
+					+indicator('Gulp', 'yellow','40')
+					+indicator('Bower', 'yellow','50')
+					+indicator('WebPack', 'yellow','90')
+					+indicator('90%', 'yellow','90')
+					+indicator('40%', 'yellow','40')
+					+indicator('50%', 'yellow','50')
