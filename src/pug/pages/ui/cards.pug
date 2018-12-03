@@ -9,28 +9,36 @@ block content
 		.container.container--left.user-content.pt-35
 			h1 Карточка - Пост в блоге
 
-			.card-post
-				.card-post__image
-					img(src="../img/thumbs/post-thumb.png", alt="")
-				h3.card-post__title Поездка в New York пример длинного названия поста ...
-				+button('Читать', '#!')
-
 			.section-ui
-				.buttons-container--ui-kit
-					+buttonBackward('Назад', '#!')
+			+cardPost('Поездка в New York пример длинного названия поста ...', '#!', "../img/thumbs/post-thumb.png")
+
 			pre.
-				+buttonBackward('Назад', '#!')
+				+cardPost('Поездка в New York пример длинного названия поста ...', '#!', "../img/thumbs/post-thumb.png")
+
+			.title mixins/_cards.pug
+			pre.
+				mixin cardPost(title, link, image)
+					.card-post
+						.card-post__image.mb-15
+							img(src= image, alt="")
+						.card-post__title.mb-15 #{title}
+						+button('Читать', link)
+
 			hr
 
 			h1 Карточка - Работа в Портфолио
 
-			.card-portfolio
-				.card-portfolio__image
-					img(src="../img/thumbs/portfolio-thumb.png", alt="")
-				h3.card-portfolio__title.ml-20 Верстка Landing Page
-				+button('Смотреть кейс', '#!')
-
 			.section-ui
-				+buttonProfile('Профиль', '#!')
+			+cardPortfolio('Верстка Landing Page', '#!', "../img/thumbs/portfolio-thumb.png")
+
 			pre.
-				+buttonProfile('Профиль', '#!')
+				+cardPortfolio('Верстка Landing Page', '#!', "../img/thumbs/portfolio-thumb.png")
+
+			.title mixins/_cards.pug
+			pre.
+				mixin cardPortfolio(title, link, image)
+					.card-portfolio
+						.card-portfolio__image.mb-15
+							img(src= image, alt="")
+						.card-portfolio__title.ml-20.mb-20 #{title}
+						+button('Смотреть кейс', link)
