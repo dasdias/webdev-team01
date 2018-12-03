@@ -1,0 +1,32 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Индикаторы - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Индикаторы
+			.section-ui
+				.indicators-container
+					.row.mt-50.ml-50.pt-50
+						+indicator('HTML5', 'green')
+						.pl-60
+						+indicator('CSS3', 'green')
+						.pl-60
+						+indicator('JS', 'green')
+						.pl-60
+						+indicator('jQuery', 'green')
+					.row.ml-50.pt-50
+						+indicator('PHP', 'blue')
+						.pl-60
+						+indicator('MySql', 'blue')
+					.row.ml-50.pt-50
+						+indicator('Git', 'yellow')
+						.pl-60
+						+indicator('Gulp', 'yellow')
+						.pl-60
+						+indicator('Bower', 'yellow')
+						.pl-60
+						+indicator('WebPack', 'yellow')

@@ -1,0 +1,16 @@
+mixin indicator(text, color)
+	if color === 'green'
+		.indicator
+			svg.svg-box
+				circle.circle.circle-green.rotate-90
+			.indicator__value #{text}
+	else if color === 'blue'
+		.indicator
+			svg.svg-box
+				circle.circle.circle-blue.rotate-90
+			.indicator__value #{text}
+	else
+		.indicator
+			svg.svg-box
+				circle.circle.circle-yellow.rotate-90
+			.indicator__value #{text}
