@@ -1,7 +1,7 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-    - var title = 'Лого - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Шапка(Гость) - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
@@ -10,17 +10,19 @@ block content
             h1 Лого
 
             .section-ui
-                div.logo
-                    div.logo-icon
-                        img(src="../img/checked-icon/logo-icon.png")
-                        span Digital Lifestyle
-                    div.logo-text
-                        span Сайт IT специалиста
+
+                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
 
             pre.
-                div.logo
-                    div.logo-icon
-                        img(src="../img/checked-icon/logo-icon.png")
-                        span Digital Lifestyle
-                    div.logo-text
-                        span Сайт IT специалиста
+                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+
+            .title mixins/_logo.pug
+
+            pre.
+                mixin logo(imgLink, logoText, descText)
+                    div.logo
+                        div.logo-icon
+                            img(src=imgLink)
+                            span #{'#{logoText}'}
+                        div.logo-text
+                            span #{'#{descText}'}

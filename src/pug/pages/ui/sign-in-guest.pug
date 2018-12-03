@@ -10,16 +10,15 @@ block content
             h1 Вход/Регистрация(Гость)
 
             .section-ui
-                +sign-in-guest('#', '#')
+                include ../../sections/sign-in-guest.pug
 
             pre.
-                +sign-in-guest('#', '#')
+                include ../../sections/sign-in-guest.pug
 
-            .title mixins/_sign-in-guest.pug
+            .title sections/sign-in-guest.pug
             pre.
-                mixin sign-in-guest(registerLink, signInLink)
-                    div.sign-in-guest
-                        span
-                            a(href=#{'"#{registerLink}"'}) Регистрация
-                         span
-                            a(href=#{'"#{signInLink}"'}) Вход
+                div.sign-in-guest
+                    span
+                        a(href="#") Регистрация
+                    span
+                        a(href="#") Вход
