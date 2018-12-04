@@ -1,13 +1,13 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-    - var title = 'Шапка(Гость) - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Шапка(Администратор) - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
     .main-wrapper
         .container.container--left.user-content.pt-35
-            h1 Шапка (Гость)
+            h1 Шапка (Администратор)
 
             .section-ui
                 .header
@@ -18,12 +18,10 @@ block content
                         div.header__nav.ml-55
                             include ../../sections/header__navigation.pug
 
-                    include ../../sections/sign-in-guest.pug
-
             pre.
-                include ../../sections/header-guest.pug
+                include ../../sections/header-admin.pug
 
-            .title sections/header-guest.pug
+            .title sections/header-admin.pug
 
             pre.
                 .header
@@ -33,5 +31,3 @@ block content
 
                         div.header__nav.ml-55
                             include ../sections/header__navigation.pug
-
-                    include ../sections/sign-in-guest.pug
