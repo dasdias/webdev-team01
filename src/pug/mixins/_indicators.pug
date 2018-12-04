@@ -1,16 +1,16 @@
 mixin indicator(text, color, degree)
-	if color === 'green'
+	if color == 'green'
 		.indicator
 			svg.svg-box
-				circle(class="degree-" + degree).circle.circle-green
+				circle.circle(style={'stroke-dashoffset': degree}).circle-green 
 			.indicator__value #{text}
-	else if color === 'blue'
+	else if color == 'blue'
 		.indicator
 			svg.svg-box
-				circle(class="degree-" + degree).circle.circle-blue
+				circle.circle(style={'stroke-dashoffset': degree}).circle-blue
 			.indicator__value #{text}
 	else
 		.indicator
 			svg.svg-box
-				circle(class="degree-" + degree).circle.circle-yellow
+				circle.circle(style={'stroke-dashoffset': degree}).circle.circle-yellow
 			.indicator__value #{text}
