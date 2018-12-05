@@ -24,6 +24,7 @@
 }
 .admin-panel-menu__link {
 	margin-right: 30px;
+
 }
 .admin-panel-menu__link, .admin-panel-sign-out__link {
 	color:  #222222;
@@ -34,10 +35,18 @@
 	font-weight: 400;
 	letter-spacing: 1.25px;
 
-	&:hover, &:focus {
-		color:  #000;
+	&:hover {
+		color:  #a0cce5;
 		text-decoration: none;		
 	}
+
+	&:hover .admin-panel-menu__icon {
+		color:  inherit;
+	}
+	&:active {
+		color: #037ec6;
+	}
+	
 }
 .admin-panel-menu__icon {
 	margin-right: 10px;
