@@ -22,11 +22,16 @@ block content
 				footer.footer
 					.container
 						.row
-							.col-xl-5
+							.col-md-5
 								.footer__text
 									p © Юрий Ключевский
-									p Создано с <span>❤</span> в <a href="http://webcademy.ru/" target="_blank">WebCademy.ru</a> в 2018 году
-							.col-xl-3
+									p
+										| Создано с 
+										span ❤
+										|  в 
+										a(href='http://webcademy.ru/', target='_blank') WebCademy.ru
+										|  в 2018 году
+							.col-md-3
 								.footer-nav
 									.footer-nav__item
 										a(href="#!") Главная
@@ -38,7 +43,7 @@ block content
 										a(href="#!") Блог
 									.footer-nav__item
 										a(href="#!") Контакты
-							.col-xl-4
+							.col-md-4
 								.footer__social-icons
 									a(href="#!" target="_blank")
 										i(class="fab fa-vk")
