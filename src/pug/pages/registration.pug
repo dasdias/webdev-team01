@@ -1,0 +1,30 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Регистрация';
+	- var pageClass = 'content-page';
+
+block content
+	+logo('../img/checked-icon/logo-icon.png', 'Супер Сайт')
+	.login #[a(href="#!") Вход]
+
+	.container
+		.row
+			.col-md-4
+				form.registration-form
+					h1.title-1 Регистрация
+					+notification__error--text('Данный email уже занят', '!#')
+					+inputText("E-mail")
+					+inputText("Пароль")
+					+buttonEnter('Регистрация', '', '', 'submit', 'name')
+
+		.row
+			.col-md-5
+				.footer__text
+					p © Юрий Ключевский
+					p
+						| Создано с 
+						span ❤
+						|  в 
+						a(href='http://webcademy.ru/', target='_blank') WebCademy.ru
+						|  в 2018 году
