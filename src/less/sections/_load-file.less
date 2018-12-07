@@ -1,0 +1,54 @@
+.load-file {
+}
+
+.load-file-fieldset {
+	border: none;
+	background-color: #FFF;
+	display: block;
+	padding: 15px;
+	margin-bottom: 30px;
+	display: block;
+}
+
+.inputfile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    display: inline-block;
+    background-color: #b1bfc7;
+    color: white;
+    font-size: 1rem;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    padding: 10px 12px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #1e6791;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile + label + span {
+	color: #1E6791;
+	vertical-align: top;
+	padding: 10px 0 0 15px;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.load-file-form {
+	border: none;
+	background-color: transparent;
+}
+

@@ -1,0 +1,19 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Загрузка файлов - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Загрузка файлов
+
+			.section-ui
+
+				include ../../sections/load-file.pug
+
+			pre.
+				include ../../sections/load-file.pug
+			
+			.title sections/load-file.pug
