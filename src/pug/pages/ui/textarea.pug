@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Textarea - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Textarea
+			
+			.section-ui
+				+inputText("Введите имя")
+			.section-ui
+				+textarea("Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. ")
+			pre.
+				+inputText("Введите имя")
+			pre.
+				+textarea("Парк находится в горах Сьерра-Невада на востоке...")
+			
+			.title mixins/_textarea.pug
+			pre.
+				mixin inputText(placeholder)
+					input.input-text(type='text' placeholder= placeholder)
+
+				mixin textarea(placeholder)
+					textarea.textarea(placeholder= placeholder)

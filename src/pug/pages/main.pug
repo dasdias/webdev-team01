@@ -5,5 +5,14 @@ block variables
 	- var pageClass = 'content-page';
 
 block content
-	br
-	h1 ...здесь ожидается что-то грандиозное ;-)
+	.sticky-footer-wrapper
+		include ../sections/admin-panel.pug
+		include ../sections/header-admin.pug
+		
+		.sticky-footer-content
+			.container.user-content.pt-80
+
+				h1 ...здесь ожидается что-то грандиозное ;-)
+
+		include ../sections/footer.pug
+
