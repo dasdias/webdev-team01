@@ -1,0 +1,28 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Лого - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35.dark-bg
+            h1 Лого
+
+            .section-ui
+
+                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+
+            pre.
+                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+
+            .title mixins/_logo.pug
+
+            pre.
+                mixin logo(imgLink, logoText, descText)
+                    div.logo
+                        div.logo-icon
+                            img(src=imgLink)
+                            span #{'#{logoText}'}
+                        div.logo-text
+                            span #{'#{descText}'}
