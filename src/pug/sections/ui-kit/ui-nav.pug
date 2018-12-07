@@ -1,7 +1,7 @@
 .left-panel.blue-skin
 	.left-panel__section
 		.title-2 UI-KIT и PUG фреймворк
-	
+
 	.left-panel__section
 		p.strong Документация
 		.left-panel-nav
@@ -35,9 +35,13 @@
 			+linkLeftPanel("Нотификации", "notifications.html")
 
 	//- Тут будут ссылки на блоки
-	//- .left-panel__section
-	//- 	p.strong Блоки
-	//- 	.left-panel-nav
+	.left-panel__section
+		p.strong Блоки
+		.left-panel-nav
+			+linkLeftPanel("Лого", "logo.html")
+			+linkLeftPanel("Вход/Регистрация(Гость)", "sign-in-guest.html")
+			+linkLeftPanel("Вход/Регистрация(Пользователь)", "sign-in-user.html")
+			+linkLeftPanel("Навигация", "navigation.html")
 
 	//- Тут будут ссылки на секции
 	.left-panel__section
@@ -48,11 +52,14 @@
 			+linkLeftPanel("Панель администратора", "admin-panel.html")
 			+linkLeftPanel("Оставить коментарий", "leave-comment.html")
 			+linkLeftPanel("Два комментария", "two-comments.html")
+			+linkLeftPanel("Шапка (Гость)", "header-guest.html")
+			+linkLeftPanel("Шапка (Администратор)", "header-admin.html")
+			+linkLeftPanel("Шапка (Пользователь)", "header-user.html")
+			+linkLeftPanel("Подвал", "footer.html")
+			+linkLeftPanel("Индикаторы", "indicators.html")
 
 	//- Тут будут ссылки на страницы
-	//- .left-panel__section
-	//- 	p.strong Страницы
-	//- 	.left-panel-nav
-
-			
-		
+	.left-panel__section
+		p.strong Страницы
+		.left-panel-nav
+			+linkLeftPanel("Работы", "../works.html")
