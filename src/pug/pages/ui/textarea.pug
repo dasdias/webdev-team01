@@ -13,11 +13,20 @@ block content
 				+inputText("Введите имя")
 			.section-ui
 				+textarea("Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. ")
+			.section-ui
+				+labelTextarea("Технологии", "Введите описание")
+			.section-ui
+				.test
+					+labelInputText("Ссылка на проект", "Введите ссылку")
 			pre.
 				+inputText("Введите имя")
 			pre.
 				+textarea("Парк находится в горах Сьерра-Невада на востоке...")
-			
+			pre.
+				+labelTextarea("Технологии", "Введите описание")
+			pre.
+				+labelInputText("Ссылка на проект", "Введите ссылку")
+
 			.title mixins/_textarea.pug
 			pre.
 				mixin inputText(placeholder)
@@ -25,3 +34,11 @@ block content
 
 				mixin textarea(placeholder)
 					textarea.textarea(placeholder= placeholder)
+
+				mixin labelTextarea(label, placeholder)
+					label.label #{label}
+						textarea.textarea(type='text' placeholder= placeholder)
+
+				mixin labelInputText(label, placeholder)
+					label.label #{label}
+						input.input-text(type='text' placeholder= placeholder)
