@@ -10,6 +10,7 @@
 	border: 1px solid @borderColor;
 	background-color: @backgroundColor;
 	padding: 5px 15px;
+	margin-top: 10px;
 	width: 100%;
 	
 	color: #000000;
@@ -18,7 +19,7 @@
 	font-weight: 400;
 	line-height: 2;
 	
-	&:hover, &:focus, &:active {
+	&:focus, &:active {
 		outline-style: none;
 		box-shadow: 0 0 0 3px @shadowColor;
 	}
@@ -27,7 +28,6 @@
 .textarea {
 	min-height: 160px;
 	padding: 10px 15px;
-	margin-top: 10px;
 	
 	color: @textareaColor;
 	line-height: 1.5;
@@ -36,20 +36,11 @@
 .label {
 	display: flex;
 	flex-direction: column;
-	// margin-bottom: 10px;
-	// margin-top: 10px;
 	color: @labelColor;
 	font-family: @baseFont;
 	font-size: 16px;
 	font-weight: 700;
 	&:hover {
-		.input-text, .textarea {
-			box-shadow: 0 0 0 3px @shadowColor;
-		}
+		cursor: pointer;
 	}
-}
-
-.input-text-label {
-	width: 262px;
-	margin-top: 10px;
 }
