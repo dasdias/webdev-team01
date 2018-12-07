@@ -5,20 +5,22 @@ block variables
 	- var pageClass = 'content-page';
 
 block content
-	+logo('../img/checked-icon/logo-icon.png', 'Супер Сайт')
-	.login #[a(href="#!") Вход]
+	.header-wrapper
+		+logo('../img/checked-icon/logo-icon.png', 'Супер Сайт')
+		.login #[a(href="#!") Вход]
 
 	.container
-		.row
-			.col-md-4
+		.row.justify-content-center
+			.col-4
 				form.registration-form
-					h1.title-1 Регистрация
+					h1.title-1.registration-form-caption Регистрация
 					+notification__error--text('Данный email уже занят', '!#')
 					+inputText("E-mail")
 					+inputText("Пароль")
 					+buttonEnter('Регистрация', '', '', 'submit', 'name')
 
-		.row
+	.container
+		.row.justify-content-center
 			.col-md-5
 				.footer__text
 					p © Юрий Ключевский
