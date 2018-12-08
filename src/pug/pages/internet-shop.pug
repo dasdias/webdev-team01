@@ -1,0 +1,56 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Интернет магазин';
+	- var pageClass = 'content-page';
+
+block content
+	.sticky-footer-wrapper
+		include ../sections/admin-panel.pug
+		.logo-wrapper
+			+logo('img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+		
+			.sticky-footer-content
+				.container.user-content.pt-85
+					.row
+						.blog-post.col-md-10.offset-md-1
+							.blog-post-heading-wrapper
+								h1.blog-post__title.title-1 Верстка и frontend Интернет магазина
+								.blog-post__info.mb-45
+									.blog-post__info-name Емельян Казаков
+									.blog-post__info-category
+										a(href="#!") Работы
+									.blog-post__info-date 16 Марта 2017
+								.blog-post__button
+									+buttonEdit('Редактировать', '#!')
+							img(src="img/blog/internet-shop.jpg").blog-post__image
+		.description
+			.sticky-footer-content
+				.container.user-content
+					.row
+						.col-md-5.offset-md-1.pl-0
+							h3.title-3 Кратко о проекте
+							p Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+							span Время работы над проектом: 6 недель
+							span Страниц сверстано: 52 страницы
+							span Бюджет проекта: до 60 000 рублей
+							h3 Результат
+							p Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+						.col-md-5.pl-10
+							h3.title-3 Технологии
+							ul
+								li HTML5, CSS3.
+								li JavaScript, jQuery.
+								li LESS, PUG, Gulp, npm, bower.
+							h3.title-3.mb-25 Ссылка на проект
+							| #[a(href="http://magnum-store.ru" target = "_ blank") http://magnum-store.ru]
+							h3.title-3.mb-25.mt-40 Код на github
+							| #[a(href="https://github.com/pozitive/magnumstore/" target = "_ blank") https://github.com/pozitive/magnumstore/]
+						.col-md-10.offset-md-1.buttons-navigation
+							.backward
+								+buttonBackward('Все работы', '#!')
+							.forward
+								+buttonForward('Следующая работа', '#!')
+
+		include ../sections/footer.pug
+
