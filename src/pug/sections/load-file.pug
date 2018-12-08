@@ -1,9 +1,10 @@
+include ../mixins/_load-file.pug
+
 .load-file
-	h4.title-4 Фотография
-	p Изображение jpg или png, размером больше, чем 100х100 пикселей и весом до 2Мб.
 	form.load-file.form
-		.load-file-fieldset
-			input#file.inputfile(type='file', name='file', data-multiple-caption='{count} файлов выбрано', multiple='')
-			label(for='file') Выбрать файл
-			span 
+		+loadFile("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей и весом до 2Мб.")
+		br
+		br
+		+loadFile("Прикрепить файл", "jpg, png, pdf, doc, весом до 2Мб.", "radius")
+
 	script(src='../../js/custom-file-input.js')

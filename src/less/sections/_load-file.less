@@ -1,16 +1,37 @@
 .load-file {
 }
 
+.load-file-title {
+	font-family: @baseFont;
+	font-size: 16px;
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+
+.load-file-opis {
+	font-family: @baseFont;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
 .load-file-fieldset {
 	border: none;
 	background-color: #FFF;
 	display: block;
-	padding: 15px;
-	margin-bottom: 30px;
-	display: block;
+//	margin-bottom: 25px;
 }
 
 .inputfile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile-rad
 {
 	width: 0.1px;
 	height: 0.1px;
@@ -30,6 +51,16 @@
     padding: 10px 12px;
 }
 
+.inputfile-rad + label {
+    display: inline-block;
+    background-color: #b1bfc7;
+    color: white;
+    font-size: 1rem;
+    -webkit-border-radius: 22px;
+            border-radius: 22px;
+    padding: 10px 12px;
+}
+
 .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: #1e6791;
@@ -40,6 +71,31 @@
 }
 
 .inputfile + label + span {
+	color: #1E6791;
+	vertical-align: top;
+	padding: 10px 0 0 15px;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.inputfile-rad:focus + label,
+.inputfile-rad + label:hover {
+    background-color: #1e6791;
+}
+
+.inputfile-rad + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile-rad + label + span {
+	color: #1E6791;
+	vertical-align: top;
+	padding: 10px 0 0 15px;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.inputfile-rad + label + span {
 	color: #1E6791;
 	vertical-align: top;
 	padding: 10px 0 0 15px;
