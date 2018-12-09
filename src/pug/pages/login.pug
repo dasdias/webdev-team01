@@ -1,28 +1,32 @@
 extends ../layouts/page-layout/page.pug
 
 block variables
-	- var title = 'Регистрация';
+	- var title = 'Вход на сайт';
 	- var pageClass = 'content-page';
 
 block content
 	.page-wrapper
 		.header-wrapper
 			+logo('../img/checked-icon/logo-icon.png', 'Супер Сайт')
-			.login #[a(href="#!") Вход]
+			.login #[a(href="#!") Регистрация]
 
 		.container
 			.row.justify-content-center
 				.col-4
 					form.registration-form
-						h1.title-1.registration-form__caption Регистрация
+						h1.title-1.registration-form__caption Вход на сайт
 						.registration-form__error
-							+notification__error--text('Данный email уже занят', '!#')
+							+notification__error('Введите email')
 						.registration-form__email
 							+inputText("E-mail")
 						.registration-form__password
 							+inputText("Пароль")
+						.password-remember-wrapper
+							.registration-form__remember
+								+checkbox('Запомнить меня','checked')
+							span #[a(href="#!").registration-form__password-recovery Забыл пароль]
 						.registration-form__button
-							+buttonEnter('Регистрация', '', '', 'submit', 'name')
+							+buttonEnter('Войти', '', 'small', 'submit', 'name')
 
 		.container
 			.row.justify-content-center
