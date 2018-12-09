@@ -9,10 +9,57 @@ block content
 		include ../sections/admin-panel.pug
 		include ../sections/header-admin.pug
 		
-		.sticky-footer-content
-			.container.user-content.pt-80
+		.brief-resume
+			.sticky-footer-content
+				.container.user-content.pt-80.pb-80
+					.row
+						.col-md-3
+							+avatarBig('avatar-1-big.jpg')
+						.col-md-9
+							h2.title-2 Емельян Казаков
+							p
+								| Я веб разработчик из Казани. Мне 28 лет.
+								br
+								| Занимаюсь разработкой современных сайтов и приложений.
+								| Мне нравится делать интересные и современные проекты.
+							p
+								| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. 
+								br
+								| Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-				h1 ...здесь ожидается что-то грандиозное ;-)
+							h3.title-3 Что я умею
+							p
+								| Меня привлекет Frontend разработка, это не только моя работа, но и хобби. 
+								br
+								| Также знаком и могу решать не сложные задачи на Backend.
+							p
+								| Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+							.brief-resume__button
+								+button('Подробнее', '#!')
+		.hr-line
+		.sticky-footer-content
+			.container.user-content.pt-90.mb-80
+				div.works__header.mb-25.title-1 
+					span 
+						strong Новые 
+							a(href="#!" target="_blank") работы
+
+				div.row.justify-content-between.mb-50
+					+cardPortfolio('Верстка Landing Page', '#!', "../img/thumbs/portfolio-thumb.png")
+					+cardPortfolio('Верстка UI набора', '#!', "../img/thumbs/portfolio-thumb1.png")
+					+cardPortfolio('Верстка интернет магазина', '#!', "../img/thumbs/portfolio-thumb2.png")
+		.sticky-footer-content
+			.container.user-content.mb-100
+				div.works__header.mb-40.title-1
+					span 
+						strong Новые записи в 
+							a(href="#!" target="_blank") блоге
+
+				div.row.justify-content-between
+					+cardPortfolio('Верстка Landing Page', '#!', "../img/thumbs/portfolio-thumb.png")
+					+cardPortfolio('Верстка UI набора', '#!', "../img/thumbs/portfolio-thumb1.png")
+					+cardPortfolio('Верстка интернет магазина', '#!', "../img/thumbs/portfolio-thumb2.png")
+
 
 		include ../sections/footer.pug
 
