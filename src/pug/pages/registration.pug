@@ -15,9 +15,12 @@ block content
 				.col-4
 					form.registration-form
 						h1.title-1.registration-form-caption Регистрация
-						+notification__error--text('Данный email уже занят', '!#')
-						+inputText("E-mail")
-						+inputText("Пароль")
+						.mb-10
+							+notification__error--text('Данный email уже занят', '!#')
+						.mb-10
+							+inputText("E-mail")
+						.mb-30
+							+inputText("Пароль")
 						+buttonEnter('Регистрация', '', '', 'submit', 'name')
 
 		.container
