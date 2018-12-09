@@ -6,7 +6,6 @@ mixin loadFile(title, opis, type)
 			input#file.inputfile.inputfile-rad(type='file', name='file', data-multiple-caption='{count} файлов выбрано', multiple='')
 			label(for='file') Выбрать файл
 			span
-				//span Выбрать файл
 	else
 		.load-file-title #{title}		
 		.load-file-opis #{opis}
@@ -14,3 +13,6 @@ mixin loadFile(title, opis, type)
 			input#file-2.inputfile(type='file', name='file-2', data-multiple-caption='{count} файлов выбрано',multiple='')
 			label(for='file-2') Выбрать файл
 			span
+
+	block append scripts
+		script(src='../../js/custom-file-input.js')
