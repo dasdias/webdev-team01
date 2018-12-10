@@ -11,18 +11,19 @@ block content
 
             .section-ui
 
-                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+                +logo('Digital Lifestyle', 'Сайт IT специалиста')
 
             pre.
-                +logo('../img/checked-icon/logo-icon.png', 'Digital Lifestyle', 'Сайт IT специалиста')
+                +logo('Digital Lifestyle', 'Сайт IT специалиста')
 
             .title mixins/_logo.pug
 
             pre.
-                mixin logo(imgLink, logoText, descText)
+                mixin logo(logoText, descText)
                     div.logo
-                        div.logo-icon
-                            img(src=imgLink)
+                        div.logo__icon
+                            span.ml-0
+                                i(class="far fa-paper-plane")
                             span #{'#{logoText}'}
-                        div.logo-text
-                            span #{'#{descText}'}
+                    div.logo__text
+                        span #{'#{descText}'}
