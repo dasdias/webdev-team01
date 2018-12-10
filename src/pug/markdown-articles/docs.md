@@ -12,6 +12,7 @@
 
 * jquery
 * jquery-custom-scrollbar
+* custom-file-input
 
 **Шрифты**
 
