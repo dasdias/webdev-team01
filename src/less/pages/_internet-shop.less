@@ -15,22 +15,15 @@
   }
 }
 
-.container {
-  .blog-post {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.blog-post__title.blog-post__title--size {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
 
-  h1.blog-post__title {
-    font-size: 36px;
-    font-weight: 900;
-    margin-bottom: 5px;
-  }
-
-  .blog-post-heading-wrapper {
+.blog-post-heading-wrapper {
     position: relative;
   }
-}
 
 .blog-post__button {
   position: absolute;
@@ -38,54 +31,54 @@
   right: -100px;
 }
 
-.description {
-  margin-top: 25px;
-  .mb-25 {
-    margin-bottom: 25px;
-  }
-  .mt-40 {
-    margin-top: 40px;
-  }
-  h3 {
-    margin-bottom: 20px;
-  }
-  p {
-    line-height: 24px;
-    font-size: 16px;
-    letter-spacing: 0.32px;
-    margin-bottom: 20px;
-    
-  }
-  span {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 0.32px;
-    line-height: 1.2;
-  }
-  ul {
-    list-style-type: none;
-    line-height: 1.3em;
-    margin-bottom: 30px;
-    li {
-      position: relative;
-      margin-bottom: 0.9em;
-      left: -28px;
+.description-about__result.description-about__result--mb {
+  margin-bottom: 20px;
+}
 
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: -10px;
-        top: 10px;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: @black;
-      }
+.description-about__paragraph.description-about__paragraph--style {
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  margin-bottom: 20px;
+}
+
+.description-about__itog{
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  line-height: 1.2;
+}
+
+.description-technologies__list {
+  list-style-type: none;
+  line-height: 1.3em;
+  margin-bottom: 25px;
+  
+  .description-technologies__list-item {
+    position: relative;
+    margin-bottom: 10px;
+    left: -28px;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -10px;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: @black;
     }
   }
-} 
+}
+
+.description-technologies__title.description-technologies__title--margin {
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
 .buttons-navigation {
   display: flex;
   padding: 20px 0 125px;

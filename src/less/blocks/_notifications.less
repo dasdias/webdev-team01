@@ -13,6 +13,11 @@
   color: white;
 }
 
+.notification__error--top-border-radius {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .notification__error--top {
   position: absolute;
   top: 0;
@@ -26,10 +31,12 @@
   width: 100%;
   padding: 59px 16px 16px;
 
-  p {
+  span {
+    display: block;
     font-size: 16px;
+    line-height: 24px;
     color: #38505e !important;
-    margin: 0;
+
     a {
       color: #38505e !important;
     }
