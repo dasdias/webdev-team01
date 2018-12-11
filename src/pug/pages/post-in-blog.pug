@@ -11,19 +11,21 @@ block content
 
         .sticky-footer-content
             .container.user-content.pt-70.make-relative
+                .row
+                    .col-10.offset-1
 
-                div.blog__button--edit
-                    +buttonEdit('Редактировать', '', '', 'submit', 'name')
+                        div.blog__button--edit
+                            +buttonEdit('Редактировать', '', '', 'submit', 'name')
 
-                include ../sections/blog-post.pug
+                        include ../sections/blog-post.pug
 
-                div.blog__buttons.mt-30.mb-35
-                    +buttonBackward('Назад', '', '', 'submit', 'name')
-                    +buttonForward('Вперед', '', '', 'submit', 'name')
+                        div.blog__buttons.mt-30.mb-35
+                            +buttonBackward('Назад', '#!')
+                            +buttonForward('Вперед', '#!')
 
-                include ../sections/two-comments.pug
+                        include ../sections/two-comments.pug
 
-                div.comment.mt-35.mb-120
-                    include ../sections/leave-comment.pug
+                        div.comment.mt-35.mb-120
+                            include ../sections/leave-comment.pug
 
         include ../sections/footer.pug
