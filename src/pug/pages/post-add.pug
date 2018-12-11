@@ -11,9 +11,20 @@ block content
 		
 		.sticky-footer-content
 			.container.user-content.pt-80
-
-				h1 ...здесь ожидается что-то грандиозное ;-)
-				h2(style="color:red; text-align: center;") Если на вашей странице сборки header и footer выглядят как на этой картинке,<br> то берите шаблон <b>pages/admin-panel_header-admin_footer.pug</b>
-				br
+				.row
+					.col-md-10.offset-md-1
+						.title-1.post-add__title Добавить пост
+						form.post-add-form
+							.post-add-form__name
+								+labelInputText("Название", "Введите имя", "name")
+							.post-add-form__file
+								+loadFile("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.")
+							.post-add-form__textarea
+								+labelTextarea("Содержание", "Введите город", "name")
+							.post-add-form-button
+								.post-add-form-button__save
+									+buttonSave('Сохранить', '', '', 'submit', 'name')
+								.post-add-form-button__cancel
+									input(type="reset" name="cansel" value="Отмена")(class="button")
 		include ../sections/footer.pug
 
