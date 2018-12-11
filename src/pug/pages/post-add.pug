@@ -10,7 +10,7 @@ block content
 		include ../sections/header-admin.pug
 		
 		.sticky-footer-content
-			.container.user-content.pt-80
+			.container.user-content.pt-80.pb-120
 				.row
 					.col-md-10.offset-md-1
 						.title-1.post-add__title Добавить пост
@@ -22,8 +22,7 @@ block content
 							.post-add-form__textarea
 								+labelTextarea("Содержание", "Введите город", "name")
 							.post-add-form-button
-								.post-add-form-button__save
-									+buttonSave('Сохранить', '', '', 'submit', 'name')
+								+buttonSave('Сохранить', '', '', 'submit', 'name')
 								.post-add-form-button__cancel
 									input(type="reset" name="cansel" value="Отмена")(class="button")
 		include ../sections/footer.pug
