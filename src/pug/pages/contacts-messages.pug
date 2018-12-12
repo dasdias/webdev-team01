@@ -11,11 +11,13 @@ block content
 
 		.sticky-footer-content
 			.container.user-content.pt-80.pb-120
-				.title-1 Сообщения от посетителей
+				.row
+					.col-md-10.offset-md-1
+						.title-1 Сообщения от посетителей
 
-				.mb-20 
-					include ../sections/user-message.pug
-				include ../sections/user-message.pug
+						.mb-20 
+							include ../sections/user-message.pug
+						include ../sections/user-message.pug
 
 			
 		include ../sections/footer.pug
