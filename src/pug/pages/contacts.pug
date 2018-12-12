@@ -21,40 +21,46 @@ block content
 
 				.row
 					.col-md-6.contacts
-						h2.contacts__title Контакты
-							.row
-								.col-4.contacts__name.
-									Email
-								.col-8.contacts__value.contacts__value--link.
-									#[a(href="#!") webdev-ninja@mail.ru]
-							.row
-								.col-4.contacts__name.
-									Skype
-								.col-8.contacts__value.contacts__value--link.
-									#[a(href="#!").contacts__value--link webdev-ninja]
-							.row
-								.col-4.contacts__name.
-									Социальные сети
-								.col-8.contacts__value.contacts__value--link.
-									#[a(href="#!") Профиль Вконтакте]
-								.col-8.contacts__value.contacts__value--link.
-									#[a(href="#!") Профиль Facebook]
-							.row
-								.col-4.contacts__name.
-									Телефон
-								.col-8.contacts__value.
-									+595-456-123
-							.row
-								.col-4.contacts__name.
-									Адрес
-								.col-8.contacts__value.
-									Россия, Московская обл.	г. Зеленоград
+						.contacts__title.
+							Контакты
+
+						.row
+							.col-4.contacts__name.
+								Email
+							.col-6.contacts__value.contacts__value--link
+								a(href="#!") webdev-ninja@mail.ru
+						.row
+							.col-4.contacts__name.
+								Skype
+							.col-6.contacts__value.contacts__value--link
+								a(href="#!").contacts__value--link webdev-ninja
+						.row
+							.col-4.contacts__name.
+								Социальные сети
+							.col-6.contacts__value
+								.contacts__value--link.contacts__value--bold-link
+									a(href="#!") Профиль Вконтакте
+								.contacts__value--link.contacts__value--bold-link
+									a(href="#!") Профиль Facebook
+						.row.mt-15
+							.col-4.contacts__name.
+								Телефон
+							.col-6.contacts__value.
+								+595-456-123
+						.row
+							.col-4.contacts__name.
+								Адрес
+							.col-6.contacts__value.
+								Россия, Московская обл.	г. Зеленоград
 
 					.col-md-4
 						form.form-contact
-							h2.form-contact__title Связаться со мной
-							+inputText("Введите имя")
-							+inputText("Email")
+							.form-contact__title.
+								Связаться со мной
+							.form-contact__name
+								+inputText("Введите имя")
+							.form-contact__email
+								+inputText("Email")
 							.form-contact__message
 								+textarea("Сообщение")
 							.form-contact__load-file
@@ -66,4 +72,3 @@ block content
 		include ../sections/map.pug
 
 		include ../sections/footer.pug
-
