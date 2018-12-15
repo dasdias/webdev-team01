@@ -9,13 +9,13 @@ block content
 		include ../sections/header-user.pug
 		
 		.sticky-footer-content
-			.container.user-content.pt-80.pb-120
+			.container.user-content.pt-50.pb-120.relative
+				.profile__button
+					+buttonEdit('Редактировать', '#!')
 				.row
 					.col-md-10.offset-md-1
 						.profile
 							.title-1.profile__title Профиль
-							.profile__button
-								+buttonEdit('Редактировать', '#!')
 						.profile-user
 							.profile-user__avatar
 								+avatarBig('avatar-1-big.jpg')
