@@ -19,11 +19,6 @@ block content
 			pre.
 				mixin comment-register(linkSignIn, linkRegister)
 					.comment__register.text-center
-						span
-							a(href= linkSignIn) Войдите
-							|
-							| или
-							|
-							a(href= linkRegister) зарегистрируйтесь
+						| #[a(href= linkSignIn) Войдите] или #[a(href= linkRegister) зарегистрируйтесь]
 						br
-						span чтобы оставить комментарий
+						| чтобы оставить комментарий
